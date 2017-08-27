@@ -32,4 +32,23 @@ STACKS AND QUEUES
 - Undo button in a grocery list app when you add an ingredient to the list. LIFO principle since “last in, first out” refers to taking out the last ingredient the user put. 
 - Coding challenge where you would have to reverse a word. You would create an empty list, and push letters starting from the end of the original word to that list, then ultimately do a .join to turn the new list of characters into a string.
 
+LINKED LISTS
+
+Linked Lists
+
+1. Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?).
+
+Nodes: Apple box, Berry box, Cherry box
+Data: “Apple” text, “Berry” text, “Cherry” text
+Head: Pointed to the Apple box
+Tail: Does not exist in that specific example (if it did, it would be pointed to the Cherry node)
+
+2. What’s the difference between doubly- and singly-linked lists?
+
+DLLs’ arrows are bidirectional (next + previous attributes), allowing users to go forward or backward with any node in the list. This is different from a singly-linked list with a tail and head, since the user can never go “previous” to the current node — they can only go forward (either starting at head, or accessing end of list with tail).
+
+3. Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+Having a tail allows O(1) since you don’t have to sift the list n times to add a node at the end. In a regular linked list, you always have to start at the head, and work your way down the nodes until you find the node with “none” assigned to its next attribute. With a tail, you just access where the tail is pointing to, skipping all that sifting.
+
 
