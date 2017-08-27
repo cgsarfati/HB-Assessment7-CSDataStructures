@@ -51,4 +51,18 @@ DLLs’ arrows are bidirectional (next + previous attributes), allowing users to
 
 Having a tail allows O(1) since you don’t have to sift the list n times to add a node at the end. In a regular linked list, you always have to start at the head, and work your way down the nodes until you find the node with “none” assigned to its next attribute. With a tail, you just access where the tail is pointing to, skipping all that sifting.
 
+TREES
 
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)? (Assume nodes are enqueued in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+Food -> Italian —> Indian —> Mexican —> Lasagna —> Pizza —> Tikka —> Saag —> Burritos
+
+
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? (Assume nodes are pushed in left-to-right order.) Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+Food —> Italian —> Lasagna —> Pizza —> Thin crust —> Chicago-style
+
+
+3. How is a binary search tree different from other trees?
+
+Binary searches eliminates half of the options with each check due to the organization and structure of the tree. The tree is balanced, meaning searching for items in the same depth as each other would take roughly the same amount of time (if it was unbalanced, the deepest item would take a little longer). The items are also organized by smallest value (left) to largest value (right). Hence, in the algorithm, an if conditional using less or greater than is implemented when comparing the intended value to the current place. We know the target value is on the left side if the target value is less than the current one. Comparing this to breadth-first search, there is no “smart” navigation, meaning that you just have to hope what you find is on the least deep level as possible. With a depth-first search, you just have to hope that your target value is on the left-most side of the tree or belongs to the left-most ancestors.
