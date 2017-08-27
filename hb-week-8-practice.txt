@@ -17,5 +17,19 @@ O(n^2)
 O(2^n)
 
 
+STACKS AND QUEUES
+
+1. In the following cases, would a stack or queue be a more appropriate data structure?
+- The process of loading and unloading pallets onto a flatbed truck: STACK
+- Putting bottle caps on bottles of beer as they roll down an assembly line: QUEUE
+- Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2): STACK
+
+2. Describe two more situations where a queue would be an appropriate data structure.
+- Caching: Storing temporary info (first in) and after a certain amount of time, the last item will be discarded (last out)
+- “Waiting list” feature in a restaurant-reservation app. First person who submits waiting list form (first in) will be put into queue for a reservation to open up, in which user will then get that spot (first out)
+
+3. Describe two more situations where a stack would be an appropriate data structure.
+- Undo button in a grocery list app when you add an ingredient to the list. LIFO principle since “last in, first out” refers to taking out the last ingredient the user put. 
+- Coding challenge where you would have to reverse a word. You would create an empty list, and push letters starting from the end of the original word to that list, then ultimately do a .join to turn the new list of characters into a string.
 
 
