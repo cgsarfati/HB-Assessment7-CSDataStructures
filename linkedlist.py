@@ -76,9 +76,13 @@ class LinkedList(object):
             fish
         """
 
-        # FIXME
+        current = self.head
 
-        pass
+        while current.next is not None:
+            print current.data
+            current = current.next
+
+        print self.tail.data
 
     def get_node_by_index(self, idx):
         """Return a node with the given index::
@@ -100,9 +104,16 @@ class LinkedList(object):
             Exception: List not long enough
         """
 
-        # FIXME
+        current_index = 0
+        current_node = self.head
 
-        pass
+        while (current_node):
+            if current_index == idx:
+                return current_node
+            current_index += 1
+            current_node = current_node.next
+
+        raise AssertionError("List not long enough")
 
 if __name__ == "__main__":
     import doctest
@@ -112,4 +123,3 @@ if __name__ == "__main__":
     if not result.failed:
         print "ALL TESTS PASSED. GOOD WORK!"
     print
-
